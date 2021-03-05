@@ -1,10 +1,10 @@
-let destination = ["fayetteville", "Rogers", "Springdale", "Huntsville"];
+let destination = ["Fayetteville", "Rogers", "Springdale", "Huntsville"];
 let restaurant = ["Taco Bell", "Chick-fil-a", "Sonic"];
 let transportation = ["Car", "Uber", "Bus"];
 let entertainment = ["Movies", "Mall", "Fishing"];
 
 
-function dayTrip(array){
+function GetRandomValueFromArray(array){
 
     let randomNumber= (Math.floor(Math.random() * array.length));
     console.log(array[randomNumber]);
@@ -12,7 +12,9 @@ function dayTrip(array){
 
 
 }
-dayTrip(destination);
-dayTrip(restaurant);
-dayTrip(transportation);
-dayTrip(entertainment);
+GetRandomValueFromArray(destination);
+GetRandomValueFromArray(restaurant);
+GetRandomValueFromArray(transportation);
+GetRandomValueFromArray(entertainment);
+
+
