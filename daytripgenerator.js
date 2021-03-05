@@ -13,13 +13,11 @@ function GetRandomValueFromArray(array){
 
 }
 userDestination= GetRandomValueFromArray(destination);
-userRestaurant= GetRandomValueFromArray(restaurant);
-userTransportation= GetRandomValueFromArray(transportation);
-userEntertainment= GetRandomValueFromArray(entertainment);
+
 
 let userDestinationInput= prompt("Are you happy with the destination "+userDestination+ "? Enter: Yes or No");
         if (userDestinationInput === "Yes" || userDestinationInput === "yes"){
-             userDestinationInput = "Comlete";
+             userDestinationInput = "Complete";
         }
         else if(userDestinationInput === "No" || userDestinationInput === "no"){
             for (let i = "no"; userDestinationInput != "Complete"; i++){
@@ -33,3 +31,24 @@ let userDestinationInput= prompt("Are you happy with the destination "+userDesti
     }
 
            console.log(userDestinationInput);
+userRestaurant= GetRandomValueFromArray(restaurant);
+
+let userRestaurantInput= prompt("Are you happy with the restaurant "+userRestaurant+ "? Enter: Yes or No");
+        if (userRestaurantInput === "Yes" || userRestaurantInput === "yes"){
+             uuserRestaurantInput = "Comlete";
+        }
+        
+        else if(userRestaurantInput === "No" || userRestaurantInput === "no"){
+            for (let i = 0; userRestaurantInput != "Complete"; i++){
+            let newRestaurant = GetRandomValueFromArray(restaurant);
+            let newRestaurantInput= prompt("How does " +newRestaurant+ " sound? Yes or No");  
+                if (newRestaurantInput=== "Yes" || newRestaurantInput === "yes"){ 
+                    userRestaurantInput = "Complete";
+                       
+               }     
+        }
+        }
+
+           console.log(userRestaurantInput);
+userTransportation= GetRandomValueFromArray(transportation);
+userEntertainment= GetRandomValueFromArray(entertainment);
