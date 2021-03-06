@@ -63,4 +63,4 @@ let userEntertainment= GetRandomValueFromArray(entertainment);
 let UserEntertainmentChoice = userInput(userEntertainment,entertainment);
 
 alert("Your day trip planning is complete! You are going to "+UserDestinationChoice+". You are going to eat at "+userRestaurant+". You are getting there by "+userTransportation+". And you are going to " +userEntertainment+".");
-
+console.log("Your day trip planning is complete! You are going to "+UserDestinationChoice+". You are going to eat at "+userRestaurant+". You are getting there by "+userTransportation+". And you are going to " +userEntertainment+".");
