@@ -1,7 +1,7 @@
 let destination = ["Fayetteville", "Rogers", "Springdale", "Huntsville"];
 let restaurant = ["Taco Bell", "Chick-fil-a", "Sonic"];
 let transportation = ["Car", "Uber", "Bus"];
-let entertainment = ["Movies", "Mall", "Fishing"];
+let entertainment = ["The Movies", "The Mall", "The Lake"];
 
 
 function GetRandomValueFromArray(array){
@@ -15,26 +15,26 @@ function GetRandomValueFromArray(array){
 let userDestination= GetRandomValueFromArray(destination);
 
 
-function userInput (varible,array){
+function userInput (variable,array){
 
- let InitialInput =prompt("Are you happy with "+varible+ "? Enter: Yes or No");
+ let InitialInput =prompt("Are you happy with "+variable+ "? Enter: Yes or No");
 
  
 
         while(InitialInput != "Yes" && InitialInput !="yes" && InitialInput !="No" && InitialInput !="no"){
         alert("Invalid Response: Please enter Yes or No");
-        let newInput=prompt("Are you happy with "+varible+ "? Enter: Yes or No")
+        let newInput=prompt("Are you happy with "+variable+ "? Enter: Yes or No")
         InitialInput = newInput;
 }
         if (InitialInput === "Yes" || InitialInput === "yes"){
-            InitialInput = "Complete";
+            return variable;
         }
         else if(InitialInput === "No" || InitialInput === "no"){
             for (let i = "no"; InitialInput != "Complete"; i++){
             let newChoice = GetRandomValueFromArray(array);// re-randomizes  
             let newChoiceInput= prompt("How does " +newChoice+ " sound? Yes or No");  // prompts user again
                 if (newChoiceInput=== "Yes" || newChoiceInput === "yes"){ // ends loop when user is ok with choice
-                    InitialInput = "Complete";
+                    return newChoice;
                        
                }     
                
@@ -43,29 +43,29 @@ function userInput (varible,array){
             
         }
         
-            return InitialInput;
+            //return InitialInput;
 }
 let UserDestinationChoice = userInput(userDestination,destination);
-console.log(UserDestinationChoice);
+
 
 let userRestaurant= GetRandomValueFromArray(restaurant);
 
 let UserRestaurantChoice = userInput(userRestaurant,restaurant);
-console.log(UserRestaurantChoice);
+
 
 let userTransportation= GetRandomValueFromArray(transportation);
 
 let UserTransportationChoice = userInput(userTransportation,transportation);
-console.log(UserTransportationChoice);
+
 
 let userEntertainment= GetRandomValueFromArray(entertainment);
 
 let UserEntertainmentChoice = userInput(userEntertainment,entertainment);
-console.log(UserEntertainmentChoice);
 
-if (UserDestinationChoice == UserRestaurantChoice && UserDestinationChoice == UserTransportationChoice && UserDestinationChoice == UserEntertainmentChoice){
+alert("Your day trip planning is complete! You are going to "+UserDestinationChoice+". You are going to eat at "+userRestaurant+". You are getting there by "+userTransportation+". And you are going to " +userEntertainment+".");
 
-}
+
+
 
 
 // userRestaurant= GetRandomValueFromArray(restaurant);
