@@ -31,9 +31,9 @@ function userInput (varible,array){
         }
         else if(InitialInput === "No" || InitialInput === "no"){
             for (let i = "no"; InitialInput != "Complete"; i++){
-            let newDestination = GetRandomValueFromArray(array);// re-randomizes  
-            let newDestinationInput= prompt("How does " +newDestination+ " sound? Yes or No");  // prompts user again
-                if (newDestinationInput=== "Yes" || newDestinationInput === "yes"){ // ends loop when user is ok with choice
+            let newChoice = GetRandomValueFromArray(array);// re-randomizes  
+            let newChoiceInput= prompt("How does " +newChoice+ " sound? Yes or No");  // prompts user again
+                if (newChoiceInput=== "Yes" || newChoiceInput === "yes"){ // ends loop when user is ok with choice
                     InitialInput = "Complete";
                        
                }     
@@ -58,7 +58,14 @@ let userTransportation= GetRandomValueFromArray(transportation);
 let UserTransportationChoice = userInput(userTransportation,transportation);
 console.log(UserTransportationChoice);
 
+let userEntertainment= GetRandomValueFromArray(entertainment);
 
+let UserEntertainmentChoice = userInput(userEntertainment,entertainment);
+console.log(UserEntertainmentChoice);
+
+if (UserDestinationChoice == UserRestaurantChoice && UserDestinationChoice == UserTransportationChoice && UserDestinationChoice == UserEntertainmentChoice){
+
+}
 
 
 // userRestaurant= GetRandomValueFromArray(restaurant);
